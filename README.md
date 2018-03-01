@@ -18,6 +18,8 @@ The app can be viewed in Github pages [here](https://dubcdr.github.io/wm-stock-t
 
 ## Development server
 
+First you'll need to run an `npm install` after cloning the repo
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
