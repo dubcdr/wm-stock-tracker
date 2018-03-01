@@ -1,0 +1,50 @@
+$max-container-width: 50em;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    header {
+        padding: 24px;
+        max-width: $max-container-width;
+    }
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        max-width: $max-container-width;
+        mat-card {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+
+            .info {
+                flex-grow: 1;
+                cursor: pointer;
+
+                h4 {
+                    margin-top: 0px;
+                }
+
+                h5 {
+                    margin-bottom: 0px;
+                }
+            }
+
+            .actions {
+                flex-grow: 0;
+            }
+        }
+    }
+
+    footer {
+        max-width: $max-container-width;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        
+        button {
+            margin-left: 10px;
+        }
+    }
+}
