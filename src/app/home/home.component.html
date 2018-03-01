@@ -1,0 +1,12 @@
+<header>
+  <h2>Stock Service</h2>
+</header>
+<div class="card-container">
+  <app-home-card *ngFor="let stock of stocks; trackBy: trackByFn" [stock]="stock" (delete)="removeStock($event)"></app-home-card>
+</div>
+<footer>
+  <mat-form-field>
+    <input matInput placeholder="Symbol" [(ngModel)]="addSymStr">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addStock()">(+)</button>
+</footer>

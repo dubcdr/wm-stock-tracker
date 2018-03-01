@@ -1,0 +1,15 @@
+<mat-card>
+  <div class="info">
+    <h4 routerLink="/history" [queryParams]="{symbol: stock.symbol}">{{stock.symbol}}</h4>
+    <div (click)="toggle()">${{stock.price | number: '1.2-2'}}
+      <small>(updated: {{stock.date | date: 'medium'}})</small>
+    </div>
+    <div *ngIf="showChange" class="yesterday">
+      change since yesterday's close (${{yesterday?.close | number: '1.2-2'}}): {{percentageChange | percent:'1.2-2'}} | ${{valueChange
+      | number: '1.2-2'}}
+    </div>
+  </div>
+  <div class="actions">
+    <button mat-button color="accent" (click)="removeStock()">(-)</button>
+  </div>
+</mat-card>

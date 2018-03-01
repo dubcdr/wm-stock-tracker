@@ -1,0 +1,28 @@
+$max-container-width: 50em;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    header {
+        padding: 24px;
+        max-width: $max-container-width;
+    }
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        max-width: $max-container-width;
+    }
+
+    footer {
+        max-width: $max-container-width;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        
+        button {
+            margin-left: 10px;
+        }
+    }
+}
