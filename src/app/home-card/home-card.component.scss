@@ -1,0 +1,28 @@
+:host {
+    mat-card {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+
+        .info {
+            flex-grow: 1;
+            cursor: pointer;
+
+            h4 {
+                margin-top: 0px;
+            }
+
+            h5 {
+                margin-bottom: 0px;
+            }
+
+            .yesterday {
+                margin-top: 5px;
+            }
+        }
+
+        .actions {
+            flex-grow: 0;
+        }
+    }
+}

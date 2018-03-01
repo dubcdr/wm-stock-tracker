@@ -2,15 +2,7 @@
   <h2>Stock Service</h2>
 </header>
 <div class="card-container">
-  <mat-card *ngFor="let stock of stocks">
-    <div class="info" routerLink="/history">
-      <h4>{{stock.symbol}}</h4>
-      <h5>${{stock.price | number: '1.2-2'}}</h5>
-    </div>
-    <div class="actions">
-      <button mat-button color="accent" (click)="removeStock(stock.symbol)">(-)</button>
-    </div>
-  </mat-card>
+  <app-home-card *ngFor="let stock of stocks; trackBy: trackByFn" [stock]="stock" (delete)="removeStock($event)"></app-home-card>
 </div>
 <footer>
   <mat-form-field>

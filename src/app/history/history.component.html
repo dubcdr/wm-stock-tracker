@@ -1,3 +1,23 @@
-<p>
-  history works!
-</p>
+<header>
+  <div class="actions spacer" routerLink="/home">&lt;--</div>
+  <div class="title">
+    <h2>{{symbol}}: 30 Day History</h2>
+  </div>
+  <div class="spacer"></div>
+</header>
+<div>
+  <mat-card *ngFor="let day of days">
+    <div>
+      <div>{{day.symbol}}</div>
+      <div>{{day.date | date: 'shortDate'}}</div>
+    </div>
+    <div>
+      <div>Open: ${{day.open | number: '1.2-2'}}</div>
+      <div>Close: ${{day.close | number: '1.2-2'}}</div>
+    </div>
+    <div>
+      <div>High: ${{day.high | number: '1.2-2'}}</div>
+      <div>Low: ${{day.low | number: '1.2-2'}}</div>
+    </div>
+  </mat-card>
+</div>

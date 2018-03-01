@@ -16,12 +16,14 @@ import { HomeComponent } from './home/home.component';
 import { StockService } from './stock.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HomeCardComponent } from './home-card/home-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HistoryComponent
+    HistoryComponent,
+    HomeCardComponent
   ],
   imports: [
     BrowserModule,

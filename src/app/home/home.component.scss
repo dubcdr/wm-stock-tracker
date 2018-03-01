@@ -12,28 +12,6 @@ $max-container-width: 50em;
         display: flex;
         flex-direction: column;
         max-width: $max-container-width;
-        mat-card {
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: row;
-
-            .info {
-                flex-grow: 1;
-                cursor: pointer;
-
-                h4 {
-                    margin-top: 0px;
-                }
-
-                h5 {
-                    margin-bottom: 0px;
-                }
-            }
-
-            .actions {
-                flex-grow: 0;
-            }
-        }
     }
 
     footer {
